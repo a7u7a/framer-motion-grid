@@ -13,7 +13,7 @@ interface HomeProps {
 
 const Home = forwardRef((props: HomeProps, ref: any) => {
   Home.displayName = "Home";
-  const snapshot = useSnapshot(state); // Leaving this here in case we need to re-render component
+  // const snapshot = useSnapshot(state); // Leaving this here in case we need to re-render component
   const router = useRouter();
 
   const cellStyle = {

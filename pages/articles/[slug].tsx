@@ -10,6 +10,16 @@ interface ArticlePageProps {
     seo: any
 }
 
+const articleStyle = {
+    position: "fixed",
+    top: "0px",
+    left: "0px",
+    right: "0px",
+    bottom: "0px",
+    overflow: "scroll",
+    backgroundColor: "white"
+}
+
 const ArticlePage = forwardRef((props: ArticlePageProps, ref: any) => {
     ArticlePage.displayName = "ArticlePage";
     const snapshot = useSnapshot(state);
@@ -25,7 +35,8 @@ const ArticlePage = forwardRef((props: ArticlePageProps, ref: any) => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     layoutId={`cell-${selectedCell}`}
-                    className={classes.articleContainer}
+                    // @ts-ignore
+                    style={articleStyle}
                 >
                     <button onClick={() => router.back()}>
                         <h2>
